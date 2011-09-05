@@ -9,13 +9,11 @@
 ;; remove this notice, or any other, from this software.
 
 (ns clojure.algo.generic.test-collection
-  (:use [clojure.test :only (deftest is are run-tests)]
-        [clojure.algo.generic :only (root-type)])
+  (:use [clojure.test :only (deftest is are run-tests)])
   (:require [clojure.algo.generic.collection :as gc]))
 
 ; Define a multiset class. The representation is a map from values to counts.
 (defrecord multiset [map])
-(derive multiset root-type)
 
 (defn mset
   [& elements]
@@ -40,7 +38,6 @@
 ; Define a sparse vector class. The representation is a map from
 ; integer indices to values.
 (defrecord sparse-vector [map])
-(derive sparse-vector root-type)
 
 (defn s-vector
   [& values]

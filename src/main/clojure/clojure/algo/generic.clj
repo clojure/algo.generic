@@ -39,7 +39,8 @@
 ; We can't use [::binary :default], so we need to define a root type
 ; of the type hierarcy. The derivation for Object covers all classes,
 ; but all non-class types will need an explicit derive clause.
-; Ultimately, a macro might take care of this.
+; Since non-class types are rare since Clojure 1.2, this need is
+; not likely to be frequent.
 ;
 (def root-type ::any)
 (derive Object root-type)

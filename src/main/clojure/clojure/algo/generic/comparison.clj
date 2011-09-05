@@ -178,7 +178,7 @@
   [x]
   (clojure.core/neg? x))
 
-(defmethod = [Object Object]
+(defmethod = [root-type root-type]
   [x y]
   (clojure.core/= x y))
 
