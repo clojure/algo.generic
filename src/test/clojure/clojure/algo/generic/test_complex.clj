@@ -1,4 +1,5 @@
 ;; Test routines for clojure.algo.generic.arithmetic
+;; and clojure.algo.generic.math_functions.
 
 ;; Copyright (c) Konrad Hinsen, 2011. All rights reserved.  The use
 ;; and distribution terms for this software are covered by the Eclipse
@@ -8,10 +9,11 @@
 ;; agreeing to be bound by the terms of this license.  You must not
 ;; remove this notice, or any other, from this software.
 
-(ns clojure.algo.generic.test-arithmetic
+(ns clojure.algo.generic.test-complex
   (:use [clojure.test :only (deftest is are run-tests)]
         [clojure.algo.generic :only (root-type)])
   (:require [clojure.algo.generic.arithmetic :as ga]
+            [clojure.algo.generic.math-functions :as gmf]
 	    [clojure.algo.generic.comparison :as gc]))
 
 ; Define a basic complex number type
@@ -83,6 +85,50 @@
         ix (imag x)
 	den ((ga/qsym ga /) (ga/+ (ga/* rx rx) (ga/* ix ix)))]
     (complex (ga/* rx den) (ga/- (ga/* ix den)))))
+
+; Math functions
+(defmethod gmf/conjugate complex-number
+  [x]
+  (complex (real x) (ga/- (imag x))))
+
+(defmethod gmf/abs complex-number
+  [x]
+  (let [r (real x)
+        i (imag x)]
+    (gmf/sqrt (ga/+ (ga/* r r) (ga/* i i)))))
+
+(let [one-half   (/ 1 2)
+      one-eighth (/ 1 8)]
+  (defmethod gmf/sqrt complex-number
+    [x]
+    (let [[r i] (vals x)]
+      (if (and (gc/zero? r) (gc/zero? i))
+        0
+        (let [; The basic formula would say
+              ;    abs (gmf/sqrt (ga/+ (ga/* r r) (ga/* i i)))
+	      ;    p   (gmf/sqrt (ga/* one-half (ga/+ abs r)))
+	      ; but the slightly more complicated one below
+	      ; avoids overflow for large r or i.
+	      ar  (gmf/abs r)
+	      ai  (gmf/abs i)
+	      r8  (ga/* one-eighth ar)
+	      i8  (ga/* one-eighth ai)
+	      abs (gmf/sqrt (ga/+ (ga/* r8 r8) (ga/* i8 i8)))
+	      p   (ga/* 2 (gmf/sqrt (ga/+ abs r8)))
+	      q   ((ga/qsym ga /) ai (ga/* 2 p))
+	      s   (gmf/sgn i)]
+	  (if (gc/< r 0)
+	    (complex q (ga/* s p))
+	    (complex p (ga/* s q))))))))
+
+(defmethod gmf/exp complex-number
+  [x]
+  (let [r (real x)
+        i (imag x)
+	exp-r (gmf/exp r)
+	cos-i (gmf/cos i)
+	sin-i (gmf/sin i)]
+    (complex (ga/* exp-r cos-i) (ga/* exp-r sin-i))))
 
 ; Complex number tests
 (deftest complex-addition
@@ -173,3 +219,43 @@
     (is (gc/= (div (complex 1 2) -1) (complex -1 -2)))
     (is (gc/= (div -1 (complex -3 -7)) (complex 3/58 -7/58)))
     (is (gc/= (div (complex -3 -7) -1) (complex 3 7)))))
+
+(deftest complex-conjugate
+  (is (gc/= (gmf/conjugate (complex 1 2)) (complex 1 -2)))
+  (is (gc/= (gmf/conjugate (complex -3 -7)) (complex -3 7)))
+  (is (gc/= (gmf/conjugate (complex 0 -2)) (complex 0 2)))
+  (is (gc/= (gmf/conjugate (complex 0 5)) (complex 0 -5))))
+
+(deftest complex-abs
+  (doseq [c [(complex 1 2) (complex -2 3) (complex 4 -2)
+             (complex -3 -7) (complex 0 -2) (complex 0 5)]]
+    (is (gmf/approx= (ga/* c (gmf/conjugate c))
+                 (gmf/sqr (gmf/abs c))
+                 1e-14))))
+
+(deftest complex-sqrt
+  (doseq [c [(complex 1 2) (complex -2 3) (complex 4 -2)
+             (complex -3 -7) (complex 0 -2) (complex 0 5)]]
+    (let [r (gmf/sqrt c)]
+      (is (gmf/approx= c (gmf/sqr r) 1e-14))
+      (is (>= (real r) 0)))))
+
+(deftest complex-exp
+  (is (gmf/approx= (gmf/exp (complex 1 2))
+                   (complex -1.1312043837568135 2.4717266720048188)
+                   1e-14))
+  (is (gmf/approx= (gmf/exp (complex 2 3))
+                   (complex -7.3151100949011028 1.0427436562359045)
+                   1e-14))
+  (is (gmf/approx= (gmf/exp (complex 4 -2))
+                   (complex -22.720847417619233 -49.645957334580565)
+                   1e-14))
+  (is (gmf/approx= (gmf/exp (complex 3 -7))
+                   (complex 15.142531566086868 -13.195928586605717)
+                   1e-14))
+  (is (gmf/approx= (gmf/exp (complex 0 -2))
+                   (complex -0.41614683654714241 -0.90929742682568171)
+                   1e-14))
+  (is (gmf/approx= (gmf/exp (complex 0 5))
+                   (complex 0.2836621854632263 -0.95892427466313845)
+                   1e-14)))
