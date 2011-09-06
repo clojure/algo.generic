@@ -1,6 +1,74 @@
 # algo.generic
 
-Future home of clojure.contrib.generic.
+Generic versions of commonly used functions, implemented as multimethods
+that can be implemented for any data type.
+
+## Usage
+
+Each submodule of clojure.algo.generic defines a set of related
+multimethods that have the same names as their type-specific
+counterparts in clojure.core. Implementations for standard Clojure
+data types are provided and behave identically to the clojure.core
+versions.
+
+### Arities
+
+Arithmetic and comparison functions are defined for the same arities
+that the corresponding clojure.core functions support.  Arities higher
+than 2 are reduced to unary and binary calls. To provide a multimethod
+implementation for binary calls with a given pair of types, use
+`[type1 type2]` as the dispatch value. For a unary call, the dispatch
+value is `type` as usual. Note that `[type1 type2]` is different from
+`[type2 type1]` (in most cases you will want to provide both) and that
+`[type type]` (binary operation with both arguments of the same type)
+is different from `type` (unary operation).
+
+### Root type
+
+This section applies only to binary operations dispatching on type
+pairs, and only for types that are *not* Java classes. Types
+created by `deftype` and `defrecord` are Java classes, meaning that
+most Clojure programmers can go on with the next section.
+
+One difficulty with binary operations is that there is no predefined
+way to provide a default implementation. For single dispatch there is
+`:default`, but there is nothing equivalent to `[:default :default]`.
+The algo.generic library therefore defines a *root type*, accessible
+as `clojure.algo.generic/root-type`, which is used in the default
+implementations of binary operations. To integrate your own type into
+this system, you must add the clause `(derive my-type
+clojure.algo.generic/root-type)` after your type definition. This is
+not required for Java classes because `java.lang.Object` is
+already derived from `root-type`.
+
+### Submodules
+
+* **algo.generic.arithmetic** provides generic `+` `-` `*` `/` for all
+  the arities that the corresponding clojure.core functions support.
+  The minimal implementations required for full arithmetic on a given
+  type is binary `+` and `*` and unary `-` and `/`. You may wish to
+  provide explicit implementations for binary `-` and `/` for
+  efficiency, otherwise the default implementations are `(- a b) => (+ a (- b))`
+   and `(/ a b) => (* a (/ b))`.
+
+* **algo.generic.collection** provides generic versions of `assoc`,
+  `dissoc`, `get`, `conj`, `empty`, `into`, and `seq`. `into` has a
+  default implementation in terms of `conj` and `seq`, but you may
+  wish to provide a more efficient one for your types.
+
+* **algo.generic.comparison** provides the comparison and test
+  functions `=`, `not=`, `<`, `>`, `<=`, `>=`, `zero?`, `pos?`,
+  `neg?`, `min`, and ` max`. `not=`, `min`, and `max` cannot be
+  redefined, they are standard functions that are implemented in
+  terms of the generic functions of the module. A minimal
+  implementation of the binary comparison functions consists of
+  `=` and `>`. Default implementations for `<`, `<=`, and `>=`
+  call `>`, but more efficient implementations can be provided.
+
+* **algo.generic.math-functions** provides generic versions of the
+  common math functions from `java.lang.Math`, plus `sgn`, `sqr`, and
+  `conjugate`.
+
 
 ## License
 
