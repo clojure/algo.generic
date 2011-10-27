@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>clojure.algo.generic.arithmetic - Generic versions of common functions 0.1.0 API documentation</title>
+    <link href="static/favicon.png" rel="icon" />
+    <link href="static/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the source by the clojure autodoc system.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
+	<h1><a title="page header title" id="page-header" href="index.html">algo.generic API Reference</a></h1>
+      </div>
+      <div id="leftcolumn"><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <span class="toc-header"><span id="project-name">Generic versions of common functions</span> <span id="version">0.1.0</span> API</span><br />
+    <ul>
+      <li><a class="wiki_link" href="index.html">Overview</a></li>
+      <li><a class="wiki_link" href="api-index.html">API Index</a></li>
+    </ul>
+    <div class="NamespaceTOC">
+      <span class="toc-header">Namespaces</span>
+      <ul id="left-sidebar-list">
+        <li><a href="clojure.algo.generic.arithmetic-api.html" class="wiki_link">clojure.algo.generic.arithmetic</a></li><li><a href="clojure.algo.generic.collection-api.html" class="wiki_link">clojure.algo.generic.collection</a></li><li><a href="clojure.algo.generic.comparison-api.html" class="wiki_link">clojure.algo.generic.comparison</a></li><li><a href="clojure.algo.generic.functor-api.html" class="wiki_link">clojure.algo.generic.functor</a></li><li><a href="clojure.algo.generic.math-functions-api.html" class="wiki_link">clojure.algo.generic.math-functions</a></li>
+      </ul>
+    </div>
+    
+    <a href="http://clojure.org" class="wiki_link">Clojure Home</a>
+  </div>
+</div>
+</div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div id="content_view" class="wiki wikiPage">
+                <div id="right-sidebar"><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#toc0">Overview</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.algo.generic.arithmetic/defmethod*">defmethod*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clojure.algo.generic.arithmetic/qsym">qsym</a>
+    </div>
+    <br />
+  </div>
+</div>
+</div>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">clojure.algo.generic.arithmetic</span>
+  - <span id="header-project">Generic versions of common functions</span> <span id="header-version">0.1.0</span> (<span id="header-status">in development</span>)
+  </h1>
+<span id="author-line">by <span id="author-name">Konrad Hinsen</span><br /></span>
+<br />Full namespace name: <span id="long-name">clojure.algo.generic.arithmetic</span>
+<p></p>
+<h2>Overview</h2>
+<pre id="namespace-docstr">Generic arithmetic interface
+This library defines generic versions of + - * / as multimethods
+that can be defined for any type. The minimal required 
+implementations for a type are binary + and * plus unary - and /.
+Everything else is derived from these automatically. Explicit
+binary definitions for - and / can be provided for
+efficiency reasons.</pre>
+
+
+<br />
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.algo.generic.arithmetic/defmethod*">defmethod*</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (defmethod* ns name &amp; args)
+</pre>
+  <pre id="var-docstr">Define a method implementation for the multimethod name in namespace ns.
+Required for implementing the division function from another namespace.</pre>
+  
+  
+  <a href="https://github.com/clojure/algo.generic/blob/6d228200b9c28bc4baa0cabf2564484adb5f096a/src/main/clojure/clojure/algo/generic/arithmetic.clj#L173" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clojure.algo.generic.arithmetic/qsym">qsym</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (qsym ns sym)
+</pre>
+  <pre id="var-docstr">Create the qualified symbol corresponding to sym in namespace ns.
+Required to access the division function from another namespace,
+e.g. as (qsym clojure.algo.generic.arithmetic /).</pre>
+  
+  
+  <a href="https://github.com/clojure/algo.generic/blob/6d228200b9c28bc4baa0cabf2564484adb5f096a/src/main/clojure/clojure/algo/generic/arithmetic.clj#L180" id="var-source">Source</a>
+</div>
+
+
+</div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2011 by Rich Hickey and the various contributors</div>
+	</div>
+      </div>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
+      Clojure auto-documentation system by Tom Faulhaber.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>
