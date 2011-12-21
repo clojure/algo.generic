@@ -3,6 +3,26 @@
 Generic versions of commonly used functions, implemented as multimethods
 that can be implemented for any data type.
 
+## Dependency
+
+In Maven:
+
+```xml
+<dependency>
+  <groupId>org.clojure</groupId>
+  <artifactId>algo.generic</artifactId>
+  <version>0.1.0</version>
+</dependency>
+```
+
+In Leiningen:
+
+```clj
+  :dependencies [...
+                 [org.clojure/algo.generic "0.1.0"]
+                 ...]
+```
+
 ## Usage
 
 Each submodule of clojure.algo.generic defines a set of related
