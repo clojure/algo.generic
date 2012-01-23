@@ -18,7 +18,7 @@
            defined for any type."}
   clojure.algo.generic.math-functions
   (:require [clojure.algo.generic.arithmetic :as ga]
-	    [clojure.algo.generic.comparison :as gc]))
+            [clojure.algo.generic.comparison :as gc]))
 
 ; This used to be in clojure.contrib.def (by Steve Gilardi),
 ; which has not been migrated to the new contrib collection.
@@ -33,12 +33,12 @@
   (let [java-symbol (symbol "java.lang.Math" (str name))]
     `(do
        (defmulti ~name
-	 ~(str "Return the " name " of x.")
-	 {:arglists '([~'x])}
-	 type)
+         ~(str "Return the " name " of x.")
+         {:arglists '([~'x])}
+         type)
        (defmethod ~name java.lang.Number
-	 [~'x]
-	 (~java-symbol ~'x)))))
+         [~'x]
+         (~java-symbol ~'x)))))
 
 (defn- two-types [x y] [(type x) (type y)])
 
@@ -48,12 +48,12 @@
   (let [java-symbol (symbol "java.lang.Math" (str name))]
     `(do
        (defmulti ~name
-	 ~(str "Return the " name " of x and y.")
-	 {:arglists '([~'x ~'y])}
-	 two-types)
+         ~(str "Return the " name " of x and y.")
+         {:arglists '([~'x ~'y])}
+         two-types)
        (defmethod ~name [java.lang.Number java.lang.Number]
-	 [~'x ~'y]
-	 (~java-symbol ~'x ~'y)))))
+         [~'x ~'y]
+         (~java-symbol ~'x ~'y)))))
 
 ; List of math functions taken from
 ; http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Math.html
@@ -85,8 +85,8 @@
 (defmethod sgn :default
   [x]
   (cond (gc/zero? x) 0
-	(gc/> x 0) 1
-	:else -1))
+        (gc/> x 0) 1
+        :else -1))
 
 ;
 ; Conjugation

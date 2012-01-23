@@ -21,7 +21,7 @@
            efficiency reasons."}
   clojure.algo.generic.arithmetic
   (:use [clojure.algo.generic
-	 :only (root-type nulary-type nary-type nary-dispatch)])
+         :only (root-type nulary-type nary-type nary-dispatch)])
   (:refer-clojure :exclude [+ - * /]))
 
 ;
@@ -84,7 +84,7 @@
 (defmethod - nulary-type
   []
   (throw (java.lang.IllegalArgumentException.
-	  "Wrong number of arguments passed")))
+          "Wrong number of arguments passed")))
 
 (defmethod - [root-type zero-type]
   [x y] x)
@@ -150,7 +150,7 @@
 (defmethod / nulary-type
   []
   (throw (java.lang.IllegalArgumentException.
-	  "Wrong number of arguments passed")))
+          "Wrong number of arguments passed")))
 
 (defmethod / [root-type one-type]
   [x y] x)

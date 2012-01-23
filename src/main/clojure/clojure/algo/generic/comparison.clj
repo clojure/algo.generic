@@ -19,7 +19,7 @@
   clojure.algo.generic.comparison
   (:refer-clojure :exclude [= not= < > <= >= zero? pos? neg? min max])
   (:use [clojure.algo.generic
-	 :only (root-type nulary-type nary-type nary-dispatch)]))
+         :only (root-type nulary-type nary-type nary-dispatch)]))
 
 ;
 ; zero? pos? neg?
