@@ -50,18 +50,34 @@ namespace.
                 <div id="right-sidebar"><div id="toc">
   <h1 class="nopad">Table of Contents</h1>
   <div style="margin-left: 1em;" class="toc-section">
-    <a href="#toc0">Overview</a>
+    <a href="#toc0" style="margin-top: 3px;">Overview</a>
+    
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#" style="margin-top: 3px;"></a>
+    
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#type-section" style="margin-top: 3px;">Types</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.algo.generic.arithmetic/defmethod*">defmethod*</a>
+      <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/one-type">one-type</a>
+      
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.algo.generic.arithmetic/qsym">qsym</a>
+      <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/zero-type">zero-type</a>
+      
     </div>
-    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#var-section" style="margin-top: 3px;">Vars and Functions</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/defmethod*">defmethod*</a>
+      
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/qsym">qsym</a>
+      
+    </div>
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">clojure.algo.generic.arithmetic</span>
-  - <span id="header-project">Generic versions of common functions</span> <span id="header-version">0.1.1</span> (<span id="header-status">in development</span>)
+                <div id="content-tag"><h1 id="overview">API for <span id="clojure.algo.generic.arithmetic">clojure.algo.generic.arithmetic</span>
+  - <span id="header-project">Generic versions of common functions</span> <span id="header-version">0.1.1</span><span id="header-status-block"> (<span id="header-status">in development</span>)</span>
   </h1>
 <span id="author-line">by <span id="author-name">Konrad Hinsen</span><br /></span>
 <br />Full namespace name: <span id="long-name">clojure.algo.generic.arithmetic</span>
@@ -77,32 +93,60 @@ efficiency reasons.</pre>
 
 
 <br />
-<h2>Public Variables and Functions</h2>
-<div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.algo.generic.arithmetic/defmethod*">defmethod*</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (defmethod* ns name &amp; args)
+
+
+<div id="type-section">
+  <p></p>
+  <h2>Types</h2>
+  <div id="type-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.algo.generic.arithmetic/one-type">one-type</h2>
+    <span id="type-type">record</span><br />
+    <pre id="type-docstr"></pre>
+    Fields: <span id="type-fields">[]</span><br />
+    Protocols: <span id="type-protocols"></span><br />
+    Interfaces: <span id="type-interfaces">clojure.lang.IKeywordLookup, clojure.lang.ILookup, clojure.lang.IObj, clojure.lang.IPersistentMap, java.io.Serializable, java.util.Map</span><br />
+  </div><div id="type-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.algo.generic.arithmetic/zero-type">zero-type</h2>
+    <span id="type-type">record</span><br />
+    <pre id="type-docstr"></pre>
+    Fields: <span id="type-fields">[]</span><br />
+    Protocols: <span id="type-protocols"></span><br />
+    Interfaces: <span id="type-interfaces">clojure.lang.IKeywordLookup, clojure.lang.ILookup, clojure.lang.IObj, clojure.lang.IPersistentMap, java.io.Serializable, java.util.Map</span><br />
+  </div>
+</div>
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.algo.generic.arithmetic/defmethod*">defmethod*</h2>
+    <span id="var-type">macro</span><br />
+    <pre id="var-usage">Usage: (defmethod* ns name &amp; args)
 </pre>
-  <pre id="var-docstr">Define a method implementation for the multimethod name in namespace ns.
+    <pre id="var-docstr">Define a method implementation for the multimethod name in namespace ns.
 Required for implementing the division function from another namespace.</pre>
-  
-  
-  <a href="https://github.com/clojure/algo.generic/blob/6d228200b9c28bc4baa0cabf2564484adb5f096a/src/main/clojure/clojure/algo/generic/arithmetic.clj#L173" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.algo.generic.arithmetic/qsym">qsym</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (qsym ns sym)
+    
+    
+    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L173" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.algo.generic.arithmetic/qsym">qsym</h2>
+    <span id="var-type">macro</span><br />
+    <pre id="var-usage">Usage: (qsym ns sym)
 </pre>
-  <pre id="var-docstr">Create the qualified symbol corresponding to sym in namespace ns.
+    <pre id="var-docstr">Create the qualified symbol corresponding to sym in namespace ns.
 Required to access the division function from another namespace,
 e.g. as (qsym clojure.algo.generic.arithmetic /).</pre>
-  
-  
-  <a href="https://github.com/clojure/algo.generic/blob/6d228200b9c28bc4baa0cabf2564484adb5f096a/src/main/clojure/clojure/algo/generic/arithmetic.clj#L180" id="var-source">Source</a>
+    
+    
+    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L180" id="var-source">Source</a>
+  </div>
 </div>
 
 
@@ -112,7 +156,7 @@ e.g. as (qsym clojure.algo.generic.arithmetic /).</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;" id="copyright">Copyright 2007-2011 by Rich Hickey and the various contributors</div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2012 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />

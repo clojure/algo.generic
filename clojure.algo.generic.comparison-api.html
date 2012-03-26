@@ -50,20 +50,31 @@ namespace.
                 <div id="right-sidebar"><div id="toc">
   <h1 class="nopad">Table of Contents</h1>
   <div style="margin-left: 1em;" class="toc-section">
-    <a href="#toc0">Overview</a>
+    <a href="#toc0" style="margin-top: 3px;">Overview</a>
+    
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#" style="margin-top: 3px;"></a>
+    
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#" style="margin-top: 3px;"></a>
+    
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#var-section" style="margin-top: 3px;">Vars and Functions</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.algo.generic.comparison/max">max</a>
+      <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/max">max</a>
+      
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.algo.generic.comparison/min">min</a>
+      <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/min">min</a>
+      
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clojure.algo.generic.comparison/not=">not=</a>
+      <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/not=">not=</a>
+      
     </div>
-    <br />
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">clojure.algo.generic.comparison</span>
-  - <span id="header-project">Generic versions of common functions</span> <span id="header-version">0.1.1</span> (<span id="header-status">in development</span>)
+                <div id="content-tag"><h1 id="overview">API for <span id="clojure.algo.generic.comparison">clojure.algo.generic.comparison</span>
+  - <span id="header-project">Generic versions of common functions</span> <span id="header-version">0.1.1</span><span id="header-status-block"> (<span id="header-status">in development</span>)</span>
   </h1>
 <span id="author-line">by <span id="author-name">Konrad Hinsen</span><br /></span>
 <br />Full namespace name: <span id="long-name">clojure.algo.generic.comparison</span>
@@ -76,46 +87,52 @@ greater/less-than relations, types must minimally implement &gt;.</pre>
 
 
 <br />
-<h2>Public Variables and Functions</h2>
-<div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.algo.generic.comparison/max">max</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (max x)
+
+
+
+<div id="var-section">
+  <p></p>
+  <h2>Public Variables and Functions</h2>
+  <div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.algo.generic.comparison/max">max</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (max x)
        (max x y)
        (max x y &amp; more)
 </pre>
-  <pre id="var-docstr">Returns the greatest of its arguments. Like clojure.core/max except that
+    <pre id="var-docstr">Returns the greatest of its arguments. Like clojure.core/max except that
 is uses generic comparison functions implementable for any data type.</pre>
-  
-  
-  <a href="https://github.com/clojure/algo.generic/blob/42134c6a583522beeedb8cdac2c15e4f490b21d0/src/main/clojure/clojure/algo/generic/comparison.clj#L204" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.algo.generic.comparison/min">min</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (min x)
+    
+    
+    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L204" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.algo.generic.comparison/min">min</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (min x)
        (min x y)
        (min x y &amp; more)
 </pre>
-  <pre id="var-docstr">Returns the least of its arguments. Like clojure.core/min except that
+    <pre id="var-docstr">Returns the least of its arguments. Like clojure.core/min except that
 is uses generic comparison functions implementable for any data type.</pre>
-  
-  
-  <a href="https://github.com/clojure/algo.generic/blob/42134c6a583522beeedb8cdac2c15e4f490b21d0/src/main/clojure/clojure/algo/generic/comparison.clj#L212" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clojure.algo.generic.comparison/not=">not=</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (not= &amp; args)
+    
+    
+    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L212" id="var-source">Source</a>
+  </div><div id="var-entry">
+    <br />
+    <hr />
+    <h2 id="clojure.algo.generic.comparison/not=">not=</h2>
+    <span id="var-type">function</span><br />
+    <pre id="var-usage">Usage: (not= &amp; args)
 </pre>
-  <pre id="var-docstr">Equivalent to (not (= ...)).</pre>
-  
-  
-  <a href="https://github.com/clojure/algo.generic/blob/42134c6a583522beeedb8cdac2c15e4f490b21d0/src/main/clojure/clojure/algo/generic/comparison.clj#L62" id="var-source">Source</a>
+    <pre id="var-docstr">Equivalent to (not (= ...)).</pre>
+    
+    
+    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L62" id="var-source">Source</a>
+  </div>
 </div>
 
 
@@ -125,7 +142,7 @@ is uses generic comparison functions implementable for any data type.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;" id="copyright">Copyright 2007-2011 by Rich Hickey and the various contributors</div>
+	  <div style="text-align: center;" id="copyright">Copyright 2007-2012 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
       <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
