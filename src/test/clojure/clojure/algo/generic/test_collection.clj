@@ -100,4 +100,4 @@
        (gc/assoc (s-vector 1 2) 2 3) (s-vector 1 2 3)
        (gc/assoc (s-vector 1 2) 4 3) (s-vector 1 2 nil nil 3)
        (gc/get (s-vector 1 2 3) 1) 2
-       (gc/seq (gc/assoc (s-vector 1) 3 3) '(1 nil nil 3))))
+       (gc/seq (gc/assoc (s-vector 1) 3 3)) '(1 nil nil 3)))
