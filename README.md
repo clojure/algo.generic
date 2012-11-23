@@ -65,6 +65,8 @@ already derived from `root-type`.
   `=` and `>`. Default implementations for `<`, `<=`, and `>=`
   call `>`, but more efficient implementations can be provided.
 
+* **algo.generic.functor** provides a generic functor interface (`fmap`).
+
 * **algo.generic.math-functions** provides generic versions of the
   common math functions from `java.lang.Math`, plus `sgn`, `sqr`, and
   `conjugate`.
