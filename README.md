@@ -70,6 +70,26 @@ already derived from `root-type`.
   `conjugate`.
 
 
+## Releases and dependency information
+
+Latest stable release: 0.1.1
+
+* [All released versions](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22algo.generic%22)
+
+* [Development Snapshot Versions](https://oss.sonatype.org/index.html#nexus-search;gav~org.clojure~algo.generic~~~)
+
+[Leiningen](http://github.com/technomancy/leiningen/) dependency information:
+
+    [org.clojure/algo.generic "0.1.1"]
+
+[Maven](http://maven.apache.org/) dependency information:
+
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>algo.generic</artifactId>
+      <version>0.1.1</version>
+    </dependency>
+
 ## License
 
 Copyright (c) Rich Hickey and contributors. All rights reserved.
