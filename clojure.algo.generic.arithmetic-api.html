@@ -65,31 +65,7 @@ namespace.
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#var-section" style="margin-top: 3px;">Vars and Functions</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/*">*</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/+">+</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/-">-</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/-&gt;one-type">-&gt;one-type</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/-&gt;zero-type">-&gt;zero-type</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic//">/</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/defmethod*">defmethod*</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/map-&gt;one-type">map-&gt;one-type</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/map-&gt;zero-type">map-&gt;zero-type</a>
       
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.algo.generic.arithmetic/qsym">qsym</a>
@@ -129,7 +105,7 @@ efficiency reasons.</pre>
     <pre id="type-docstr"></pre>
     Fields: <span id="type-fields">[]</span><br />
     Protocols: <span id="type-protocols"></span><br />
-    Interfaces: <span id="type-interfaces">clojure.lang.IHashEq, clojure.lang.IKeywordLookup, clojure.lang.ILookup, clojure.lang.IObj, clojure.lang.IPersistentMap, java.io.Serializable, java.util.Map</span><br />
+    Interfaces: <span id="type-interfaces">clojure.lang.IKeywordLookup, clojure.lang.ILookup, clojure.lang.IObj, clojure.lang.IPersistentMap, java.io.Serializable, java.util.Map</span><br />
   </div><div id="type-entry">
     <br />
     <hr />
@@ -138,93 +114,13 @@ efficiency reasons.</pre>
     <pre id="type-docstr"></pre>
     Fields: <span id="type-fields">[]</span><br />
     Protocols: <span id="type-protocols"></span><br />
-    Interfaces: <span id="type-interfaces">clojure.lang.IHashEq, clojure.lang.IKeywordLookup, clojure.lang.ILookup, clojure.lang.IObj, clojure.lang.IPersistentMap, java.io.Serializable, java.util.Map</span><br />
+    Interfaces: <span id="type-interfaces">clojure.lang.IKeywordLookup, clojure.lang.ILookup, clojure.lang.IObj, clojure.lang.IPersistentMap, java.io.Serializable, java.util.Map</span><br />
   </div>
 </div>
 <div id="var-section">
   <p></p>
   <h2>Public Variables and Functions</h2>
   <div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.arithmetic/*">*</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (* x)
-       (* x y)
-       (* x y &amp; more)
-</pre>
-    <pre id="var-docstr">Return the product of all arguments. The minimal implementation for type
-::my-type is the binary form with dispatch value [::my-type ::my-type].</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L111" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.arithmetic/+">+</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (+ x)
-       (+ x y)
-       (+ x y &amp; more)
-</pre>
-    <pre id="var-docstr">Return the sum of all arguments. The minimal implementation for type
-::my-type is the binary form with dispatch value [::my-type ::my-type].</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L45" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.arithmetic/-">-</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (- x)
-       (- x y)
-       (- x y &amp; more)
-</pre>
-    <pre id="var-docstr">Return the difference of the first argument and the sum of all other
-arguments. The minimal implementation for type ::my-type is the binary
-form with dispatch value [::my-type ::my-type].</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L77" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.arithmetic/-&gt;one-type">-&gt;one-type</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (-&gt;one-type)
-</pre>
-    <pre id="var-docstr">Positional factory function for class clojure.algo.generic.arithmetic.one-type.</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L34" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.arithmetic/-&gt;zero-type">-&gt;zero-type</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (-&gt;zero-type)
-</pre>
-    <pre id="var-docstr">Positional factory function for class clojure.algo.generic.arithmetic.zero-type.</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L30" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.arithmetic//">/</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (/ x)
-       (/ x y)
-       (/ x y &amp; more)
-</pre>
-    <pre id="var-docstr">Return the quotient of the first argument and the product of all other
-arguments. The minimal implementation for type ::my-type is the binary
-form with dispatch value [::my-type ::my-type].</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L143" id="var-source">Source</a>
-  </div><div id="var-entry">
     <br />
     <hr />
     <h2 id="clojure.algo.generic.arithmetic/defmethod*">defmethod*</h2>
@@ -236,28 +132,6 @@ Required for implementing the division function from another namespace.</pre>
     
     
     <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L173" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.arithmetic/map-&gt;one-type">map-&gt;one-type</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (map-&gt;one-type m__5828__auto__)
-</pre>
-    <pre id="var-docstr">Factory function for class clojure.algo.generic.arithmetic.one-type, taking a map of keywords to field values.</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L34" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.arithmetic/map-&gt;zero-type">map-&gt;zero-type</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (map-&gt;zero-type m__5828__auto__)
-</pre>
-    <pre id="var-docstr">Factory function for class clojure.algo.generic.arithmetic.zero-type, taking a map of keywords to field values.</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L30" id="var-source">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />

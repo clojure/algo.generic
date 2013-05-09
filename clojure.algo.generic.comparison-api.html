@@ -59,37 +59,13 @@ namespace.
   </div><div style="margin-left: 1em;" class="toc-section">
     <a href="#var-section" style="margin-top: 3px;">Vars and Functions</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/&lt;">&lt;</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/&lt;=">&lt;=</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/=">=</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/&gt;">&gt;</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/&gt;=">&gt;=</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/max">max</a>
       
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/min">min</a>
       
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/neg?">neg?</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
       <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/not=">not=</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/pos?">pos?</a>
-      
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.comparison/zero?">zero?</a>
       
     </div>
   </div>
@@ -117,83 +93,6 @@ greater/less-than relations, types must minimally implement &gt;.</pre>
   <p></p>
   <h2>Public Variables and Functions</h2>
   <div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.comparison/&lt;">&lt;</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (&lt; x)
-       (&lt; x y)
-       (&lt; x y &amp; more)
-</pre>
-    <pre id="var-docstr">Return true if each argument is smaller than the following ones.
-The minimal implementation for type ::my-type is the binary form
-with dispatch value [::my-type ::my-type]. A default implementation
-is provided in terms of &gt;.</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L91" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.comparison/&lt;=">&lt;=</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (&lt;= x)
-       (&lt;= x y)
-       (&lt;= x y &amp; more)
-</pre>
-    <pre id="var-docstr">Return true if each arguments is smaller than or equal to the following
-ones. The minimal implementation for type ::my-type is the binary form
-with dispatch value [::my-type ::my-type]. A default implementation
-is provided in terms of &gt;.</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L143" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.comparison/=">=</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (= x)
-       (= x y)
-       (= x y &amp; more)
-</pre>
-    <pre id="var-docstr">Return true if all arguments are equal. The minimal implementation for type
-::my-type is the binary form with dispatch value [::my-type ::my-type].</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L45" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.comparison/&gt;">&gt;</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (&gt; x)
-       (&gt; x y)
-       (&gt; x y &amp; more)
-</pre>
-    <pre id="var-docstr">Return true if each argument is larger than the following ones.
-The minimal implementation for type ::my-type is the binary form
-with dispatch value [::my-type ::my-type].</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L70" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.comparison/&gt;=">&gt;=</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (&gt;= x)
-       (&gt;= x y)
-       (&gt;= x y &amp; more)
-</pre>
-    <pre id="var-docstr">Return true if each argument is larger than or equal to the following
-ones. The minimal implementation for type ::my-type is the binary form
-with dispatch value [::my-type ::my-type]. A default implementation
-is provided in terms of &lt;.</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L117" id="var-source">Source</a>
-  </div><div id="var-entry">
     <br />
     <hr />
     <h2 id="clojure.algo.generic.comparison/max">max</h2>
@@ -224,17 +123,6 @@ is uses generic comparison functions implementable for any data type.</pre>
   </div><div id="var-entry">
     <br />
     <hr />
-    <h2 id="clojure.algo.generic.comparison/neg?">neg?</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (neg? x)
-</pre>
-    <pre id="var-docstr">Return true of x is negative.</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L37" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
     <h2 id="clojure.algo.generic.comparison/not=">not=</h2>
     <span id="var-type">function</span><br />
     <pre id="var-usage">Usage: (not= &amp; args)
@@ -243,28 +131,6 @@ is uses generic comparison functions implementable for any data type.</pre>
     
     
     <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L62" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.comparison/pos?">pos?</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (pos? x)
-</pre>
-    <pre id="var-docstr">Return true of x is positive.</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L32" id="var-source">Source</a>
-  </div><div id="var-entry">
-    <br />
-    <hr />
-    <h2 id="clojure.algo.generic.comparison/zero?">zero?</h2>
-    <span id="var-type">function</span><br />
-    <pre id="var-usage">Usage: (zero? x)
-</pre>
-    <pre id="var-docstr">Return true of x is zero.</pre>
-    
-    
-    <a href="https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L27" id="var-source">Source</a>
   </div>
 </div>
 
