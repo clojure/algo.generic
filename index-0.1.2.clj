@@ -39,7 +39,91 @@
    :doc
    "Generic math function interface\nThis library defines generic versions of common mathematical\nfunctions such as sqrt or sin as multimethods that can be\ndefined for any type."}),
  :vars
- ({:arglists ([ns name & args]),
+ ({:arglists ([x] [x y] [x y & more]),
+   :name "*",
+   :namespace "clojure.algo.generic.arithmetic",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L111",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/*",
+   :doc
+   "Return the product of all arguments. The minimal implementation for type\n::my-type is the binary form with dispatch value [::my-type ::my-type].",
+   :var-type "function",
+   :line 111,
+   :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
+  {:arglists ([x] [x y] [x y & more]),
+   :name "+",
+   :namespace "clojure.algo.generic.arithmetic",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L45",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/+",
+   :doc
+   "Return the sum of all arguments. The minimal implementation for type\n::my-type is the binary form with dispatch value [::my-type ::my-type].",
+   :var-type "function",
+   :line 45,
+   :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
+  {:arglists ([x] [x y] [x y & more]),
+   :name "-",
+   :namespace "clojure.algo.generic.arithmetic",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L77",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/-",
+   :doc
+   "Return the difference of the first argument and the sum of all other\narguments. The minimal implementation for type ::my-type is the binary\nform with dispatch value [::my-type ::my-type].",
+   :var-type "function",
+   :line 77,
+   :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
+  {:arglists ([]),
+   :name "->one-type",
+   :namespace "clojure.algo.generic.arithmetic",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L34",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/->one-type",
+   :doc
+   "Positional factory function for class clojure.algo.generic.arithmetic.one-type.",
+   :var-type "function",
+   :line 34,
+   :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
+  {:arglists ([]),
+   :name "->zero-type",
+   :namespace "clojure.algo.generic.arithmetic",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L30",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/->zero-type",
+   :doc
+   "Positional factory function for class clojure.algo.generic.arithmetic.zero-type.",
+   :var-type "function",
+   :line 30,
+   :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
+  {:arglists ([x] [x y] [x y & more]),
+   :name "/",
+   :namespace "clojure.algo.generic.arithmetic",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L143",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic//",
+   :doc
+   "Return the quotient of the first argument and the product of all other\narguments. The minimal implementation for type ::my-type is the binary\nform with dispatch value [::my-type ::my-type].",
+   :var-type "function",
+   :line 143,
+   :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
+  {:arglists ([ns name & args]),
    :name "defmethod*",
    :namespace "clojure.algo.generic.arithmetic",
    :source-url
@@ -52,6 +136,34 @@
    "Define a method implementation for the multimethod name in namespace ns.\nRequired for implementing the division function from another namespace.",
    :var-type "macro",
    :line 173,
+   :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
+  {:arglists ([m__5818__auto__]),
+   :name "map->one-type",
+   :namespace "clojure.algo.generic.arithmetic",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L34",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/map->one-type",
+   :doc
+   "Factory function for class clojure.algo.generic.arithmetic.one-type, taking a map of keywords to field values.",
+   :var-type "function",
+   :line 34,
+   :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
+  {:arglists ([m__5818__auto__]),
+   :name "map->zero-type",
+   :namespace "clojure.algo.generic.arithmetic",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L30",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/map->zero-type",
+   :doc
+   "Factory function for class clojure.algo.generic.arithmetic.zero-type, taking a map of keywords to field values.",
+   :var-type "function",
+   :line 30,
    :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
   {:arglists ([ns sym]),
    :name "qsym",
@@ -180,6 +292,76 @@
    :line 107,
    :file "src/main/clojure/clojure/algo/generic/collection.clj"}
   {:arglists ([x] [x y] [x y & more]),
+   :name "<",
+   :namespace "clojure.algo.generic.comparison",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L91",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/<",
+   :doc
+   "Return true if each argument is smaller than the following ones.\nThe minimal implementation for type ::my-type is the binary form\nwith dispatch value [::my-type ::my-type]. A default implementation\nis provided in terms of >.",
+   :var-type "function",
+   :line 91,
+   :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
+  {:arglists ([x] [x y] [x y & more]),
+   :name "<=",
+   :namespace "clojure.algo.generic.comparison",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L143",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/<=",
+   :doc
+   "Return true if each arguments is smaller than or equal to the following\nones. The minimal implementation for type ::my-type is the binary form\nwith dispatch value [::my-type ::my-type]. A default implementation\nis provided in terms of >.",
+   :var-type "function",
+   :line 143,
+   :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
+  {:arglists ([x] [x y] [x y & more]),
+   :name "=",
+   :namespace "clojure.algo.generic.comparison",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L45",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/=",
+   :doc
+   "Return true if all arguments are equal. The minimal implementation for type\n::my-type is the binary form with dispatch value [::my-type ::my-type].",
+   :var-type "function",
+   :line 45,
+   :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
+  {:arglists ([x] [x y] [x y & more]),
+   :name ">",
+   :namespace "clojure.algo.generic.comparison",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L70",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/>",
+   :doc
+   "Return true if each argument is larger than the following ones.\nThe minimal implementation for type ::my-type is the binary form\nwith dispatch value [::my-type ::my-type].",
+   :var-type "function",
+   :line 70,
+   :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
+  {:arglists ([x] [x y] [x y & more]),
+   :name ">=",
+   :namespace "clojure.algo.generic.comparison",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L117",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/>=",
+   :doc
+   "Return true if each argument is larger than or equal to the following\nones. The minimal implementation for type ::my-type is the binary form\nwith dispatch value [::my-type ::my-type]. A default implementation\nis provided in terms of <.",
+   :var-type "function",
+   :line 117,
+   :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
+  {:arglists ([x] [x y] [x y & more]),
    :name "max",
    :namespace "clojure.algo.generic.comparison",
    :source-url
@@ -207,6 +389,19 @@
    :var-type "function",
    :line 212,
    :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
+  {:arglists ([x]),
+   :name "neg?",
+   :namespace "clojure.algo.generic.comparison",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L37",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/neg?",
+   :doc "Return true of x is negative.",
+   :var-type "function",
+   :line 37,
+   :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
   {:arglists ([& args]),
    :name "not=",
    :namespace "clojure.algo.generic.comparison",
@@ -219,6 +414,32 @@
    :doc "Equivalent to (not (= ...)).",
    :var-type "function",
    :line 62,
+   :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
+  {:arglists ([x]),
+   :name "pos?",
+   :namespace "clojure.algo.generic.comparison",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L32",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/pos?",
+   :doc "Return true of x is positive.",
+   :var-type "function",
+   :line 32,
+   :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
+  {:arglists ([x]),
+   :name "zero?",
+   :namespace "clojure.algo.generic.comparison",
+   :source-url
+   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj#L27",
+   :raw-source-url
+   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/comparison.clj",
+   :wiki-url
+   "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/zero?",
+   :doc "Return true of x is zero.",
+   :var-type "function",
+   :line 27,
    :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
   {:arglists ([f s]),
    :name "fmap",
