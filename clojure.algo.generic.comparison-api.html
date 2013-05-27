@@ -120,7 +120,7 @@ greater/less-than relations, types must minimally implement &gt;.</pre>
     <br />
     <hr />
     <h2 id="clojure.algo.generic.comparison/&lt;">&lt;</h2>
-    <span id="var-type">function</span><br />
+    <span id="var-type">multimethod</span><br />
     <pre id="var-usage">Usage: (&lt; x)
        (&lt; x y)
        (&lt; x y &amp; more)
@@ -136,7 +136,7 @@ is provided in terms of &gt;.</pre>
     <br />
     <hr />
     <h2 id="clojure.algo.generic.comparison/&lt;=">&lt;=</h2>
-    <span id="var-type">function</span><br />
+    <span id="var-type">multimethod</span><br />
     <pre id="var-usage">Usage: (&lt;= x)
        (&lt;= x y)
        (&lt;= x y &amp; more)
@@ -152,7 +152,7 @@ is provided in terms of &gt;.</pre>
     <br />
     <hr />
     <h2 id="clojure.algo.generic.comparison/=">=</h2>
-    <span id="var-type">function</span><br />
+    <span id="var-type">multimethod</span><br />
     <pre id="var-usage">Usage: (= x)
        (= x y)
        (= x y &amp; more)
@@ -166,7 +166,7 @@ is provided in terms of &gt;.</pre>
     <br />
     <hr />
     <h2 id="clojure.algo.generic.comparison/&gt;">&gt;</h2>
-    <span id="var-type">function</span><br />
+    <span id="var-type">multimethod</span><br />
     <pre id="var-usage">Usage: (&gt; x)
        (&gt; x y)
        (&gt; x y &amp; more)
@@ -181,7 +181,7 @@ with dispatch value [::my-type ::my-type].</pre>
     <br />
     <hr />
     <h2 id="clojure.algo.generic.comparison/&gt;=">&gt;=</h2>
-    <span id="var-type">function</span><br />
+    <span id="var-type">multimethod</span><br />
     <pre id="var-usage">Usage: (&gt;= x)
        (&gt;= x y)
        (&gt;= x y &amp; more)
@@ -225,7 +225,7 @@ is uses generic comparison functions implementable for any data type.</pre>
     <br />
     <hr />
     <h2 id="clojure.algo.generic.comparison/neg?">neg?</h2>
-    <span id="var-type">function</span><br />
+    <span id="var-type">multimethod</span><br />
     <pre id="var-usage">Usage: (neg? x)
 </pre>
     <pre id="var-docstr">Return true of x is negative.</pre>
@@ -247,7 +247,7 @@ is uses generic comparison functions implementable for any data type.</pre>
     <br />
     <hr />
     <h2 id="clojure.algo.generic.comparison/pos?">pos?</h2>
-    <span id="var-type">function</span><br />
+    <span id="var-type">multimethod</span><br />
     <pre id="var-usage">Usage: (pos? x)
 </pre>
     <pre id="var-docstr">Return true of x is positive.</pre>
@@ -258,7 +258,7 @@ is uses generic comparison functions implementable for any data type.</pre>
     <br />
     <hr />
     <h2 id="clojure.algo.generic.comparison/zero?">zero?</h2>
-    <span id="var-type">function</span><br />
+    <span id="var-type">multimethod</span><br />
     <pre id="var-usage">Usage: (zero? x)
 </pre>
     <pre id="var-docstr">Return true of x is zero.</pre>

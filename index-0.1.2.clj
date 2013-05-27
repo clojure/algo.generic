@@ -50,7 +50,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/*",
    :doc
    "Return the product of all arguments. The minimal implementation for type\n::my-type is the binary form with dispatch value [::my-type ::my-type].",
-   :var-type "function",
+   :var-type "multimethod",
    :line 111,
    :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
   {:arglists ([x] [x y] [x y & more]),
@@ -64,7 +64,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/+",
    :doc
    "Return the sum of all arguments. The minimal implementation for type\n::my-type is the binary form with dispatch value [::my-type ::my-type].",
-   :var-type "function",
+   :var-type "multimethod",
    :line 45,
    :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
   {:arglists ([x] [x y] [x y & more]),
@@ -78,7 +78,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/-",
    :doc
    "Return the difference of the first argument and the sum of all other\narguments. The minimal implementation for type ::my-type is the binary\nform with dispatch value [::my-type ::my-type].",
-   :var-type "function",
+   :var-type "multimethod",
    :line 77,
    :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
   {:arglists ([]),
@@ -120,7 +120,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic//",
    :doc
    "Return the quotient of the first argument and the product of all other\narguments. The minimal implementation for type ::my-type is the binary\nform with dispatch value [::my-type ::my-type].",
-   :var-type "function",
+   :var-type "multimethod",
    :line 143,
    :file "src/main/clojure/clojure/algo/generic/arithmetic.clj"}
   {:arglists ([ns name & args]),
@@ -206,7 +206,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/assoc",
    :doc
    "Returns a new collection in which the values corresponding to the\ngiven keys are updated by the given values. Each type of collection\ncan have specific restrictions on the possible keys.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 25,
    :file "src/main/clojure/clojure/algo/generic/collection.clj"}
   {:arglists ([coll & xs]),
@@ -220,7 +220,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/conj",
    :doc
    "Returns a new collection resulting from adding all xs to coll.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 39,
    :file "src/main/clojure/clojure/algo/generic/collection.clj"}
   {:arglists ([coll & keys]),
@@ -234,7 +234,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/dissoc",
    :doc
    "Returns a new collection in which the entries corresponding to the\ngiven keys are removed. Each type of collection can have specific\nrestrictions on the possible keys.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 51,
    :file "src/main/clojure/clojure/algo/generic/collection.clj"}
   {:arglists ([coll]),
@@ -247,7 +247,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/empty",
    :doc "Returns an empty collection of the same kind as the argument",
-   :var-type "function",
+   :var-type "multimethod",
    :line 65,
    :file "src/main/clojure/clojure/algo/generic/collection.clj"}
   {:arglists ([coll key] [coll key not-found]),
@@ -261,7 +261,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/get",
    :doc
    "Returns the element of coll referred to by key. Each type of collection\ncan have specific restrictions on the possible keys.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 77,
    :file "src/main/clojure/clojure/algo/generic/collection.clj"}
   {:arglists ([to from]),
@@ -275,7 +275,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/into",
    :doc
    "Returns a new coll consisting of to-coll with all of the items of\nfrom-coll conjoined. A default implementation based on reduce, conj, and\nseq is provided.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 92,
    :file "src/main/clojure/clojure/algo/generic/collection.clj"}
   {:arglists ([s]),
@@ -288,7 +288,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/seq",
    :doc "Returns a seq on the object s.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 107,
    :file "src/main/clojure/clojure/algo/generic/collection.clj"}
   {:arglists ([x] [x y] [x y & more]),
@@ -302,7 +302,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/<",
    :doc
    "Return true if each argument is smaller than the following ones.\nThe minimal implementation for type ::my-type is the binary form\nwith dispatch value [::my-type ::my-type]. A default implementation\nis provided in terms of >.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 91,
    :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
   {:arglists ([x] [x y] [x y & more]),
@@ -316,7 +316,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/<=",
    :doc
    "Return true if each arguments is smaller than or equal to the following\nones. The minimal implementation for type ::my-type is the binary form\nwith dispatch value [::my-type ::my-type]. A default implementation\nis provided in terms of >.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 143,
    :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
   {:arglists ([x] [x y] [x y & more]),
@@ -330,7 +330,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/=",
    :doc
    "Return true if all arguments are equal. The minimal implementation for type\n::my-type is the binary form with dispatch value [::my-type ::my-type].",
-   :var-type "function",
+   :var-type "multimethod",
    :line 45,
    :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
   {:arglists ([x] [x y] [x y & more]),
@@ -344,7 +344,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/>",
    :doc
    "Return true if each argument is larger than the following ones.\nThe minimal implementation for type ::my-type is the binary form\nwith dispatch value [::my-type ::my-type].",
-   :var-type "function",
+   :var-type "multimethod",
    :line 70,
    :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
   {:arglists ([x] [x y] [x y & more]),
@@ -358,7 +358,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/>=",
    :doc
    "Return true if each argument is larger than or equal to the following\nones. The minimal implementation for type ::my-type is the binary form\nwith dispatch value [::my-type ::my-type]. A default implementation\nis provided in terms of <.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 117,
    :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
   {:arglists ([x] [x y] [x y & more]),
@@ -399,7 +399,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/neg?",
    :doc "Return true of x is negative.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 37,
    :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
   {:arglists ([& args]),
@@ -425,7 +425,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/pos?",
    :doc "Return true of x is positive.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 32,
    :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
   {:arglists ([x]),
@@ -438,7 +438,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/zero?",
    :doc "Return true of x is zero.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 27,
    :file "src/main/clojure/clojure/algo/generic/comparison.clj"}
   {:arglists ([f s]),
@@ -452,7 +452,7 @@
    "http://clojure.github.com/algo.generic//clojure.algo.generic.functor-api.html#clojure.algo.generic.functor/fmap",
    :doc
    "Applies function f to each item in the data structure s and returns\na structure of the same kind.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 19,
    :file "src/main/clojure/clojure/algo/generic/functor.clj"}
   {:arglists ([x]),
@@ -465,7 +465,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/abs",
    :doc "Return the abs of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 60,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -478,7 +478,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/acos",
    :doc "Return the acos of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 61,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x y eps]),
@@ -505,7 +505,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/asin",
    :doc "Return the asin of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 62,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -518,7 +518,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/atan",
    :doc "Return the atan of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 63,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x y]),
@@ -531,7 +531,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/atan2",
    :doc "Return the atan2 of x and y.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 64,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -544,7 +544,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/ceil",
    :doc "Return the ceil of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 65,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -557,7 +557,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/conjugate",
    :doc "Return the conjugate of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 94,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -570,7 +570,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/cos",
    :doc "Return the cos of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 66,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([name & decls]),
@@ -596,7 +596,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/exp",
    :doc "Return the exp of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 67,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -609,7 +609,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/floor",
    :doc "Return the floor of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 68,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -622,7 +622,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/log",
    :doc "Return the log of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 69,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x y]),
@@ -635,7 +635,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/pow",
    :doc "Return the pow of x and y.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 70,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -648,7 +648,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/rint",
    :doc "Return the rint of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 71,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -661,7 +661,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/round",
    :doc "Return the round of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 72,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -674,7 +674,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sgn",
    :doc "Return the sign of x (-1, 0, or 1).",
-   :var-type "function",
+   :var-type "multimethod",
    :line 80,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -687,7 +687,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sin",
    :doc "Return the sin of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 73,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -700,7 +700,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sqr",
    :doc "Return the square of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 105,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -713,7 +713,7 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sqrt",
    :doc "Return the sqrt of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 74,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
@@ -726,6 +726,6 @@
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/tan",
    :doc "Return the tan of x.",
-   :var-type "function",
+   :var-type "multimethod",
    :line 75,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"})}
