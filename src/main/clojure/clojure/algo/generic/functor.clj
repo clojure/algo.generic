@@ -45,3 +45,19 @@
 (prefer-method fmap clojure.lang.IPersistentVector clojure.lang.IFn)
 (prefer-method fmap clojure.lang.IPersistentMap clojure.lang.IFn)
 (prefer-method fmap clojure.lang.IPersistentSet clojure.lang.IFn)
+
+(defmethod fmap clojure.lang.LazySeq
+  [f s]
+  (map f s))
+
+(defmethod fmap java.util.concurrent.Future
+  [f o]
+  (future (f @o)))
+
+(defmethod fmap clojure.lang.Delay
+  [f d]
+  (delay (f @d)))
+
+(defmethod fmap nil
+  [_ _]
+  nil)

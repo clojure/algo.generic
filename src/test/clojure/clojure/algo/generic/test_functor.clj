@@ -19,7 +19,9 @@
        (gf/fmap inc (list 1 2 3)) (list 2 3 4)
        (gf/fmap inc [1 2 3]) [2 3 4]
        (gf/fmap inc {:A 1 :B 2 :C 3}) {:A 2 :B 3 :C 4}
-       (gf/fmap inc #{1 2 3}) #{2 3 4}))
+       (gf/fmap inc #{1 2 3}) #{2 3 4}
+       (gf/fmap inc (lazy-seq [1 2 3])) (list 2 3 4)
+       (gf/fmap inc nil) nil))
 
 ; Test implementation for functions
 (deftest functions
@@ -27,6 +29,13 @@
         x [-1 0 1 2]]
     (is (= (map (gf/fmap - f) x)
            (map (comp - f) x)))))
+
+; Futures and delays
+(deftest future-test
+  (is (= 2 @(gf/fmap inc (future 1)))))
+
+(deftest delay-test
+  (is (= 2 @(gf/fmap inc (delay 1)))))
 
 ; Define a multiset class. The representation is a map from values to counts.
 (defrecord multiset [map])
