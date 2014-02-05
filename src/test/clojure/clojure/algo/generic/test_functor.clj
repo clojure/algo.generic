@@ -21,6 +21,12 @@
        (gf/fmap inc {:A 1 :B 2 :C 3}) {:A 2 :B 3 :C 4}
        (gf/fmap inc #{1 2 3}) #{2 3 4}))
 
+; Test implementation for functions
+(deftest functions
+  (let [f (fn [x] (+ x x))
+        x [-1 0 1 2]]
+    (is (= (map (gf/fmap - f) x)
+           (map (comp - f) x)))))
 
 ; Define a multiset class. The representation is a map from values to counts.
 (defrecord multiset [map])

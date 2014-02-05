@@ -37,3 +37,11 @@
 (defmethod fmap clojure.lang.IPersistentSet
   [f s]
   (into (empty s) (map f s)))
+
+(defmethod fmap clojure.lang.IFn
+  [f fn]
+  (comp f fn))
+
+(prefer-method fmap clojure.lang.IPersistentVector clojure.lang.IFn)
+(prefer-method fmap clojure.lang.IPersistentMap clojure.lang.IFn)
+(prefer-method fmap clojure.lang.IPersistentSet clojure.lang.IFn)
