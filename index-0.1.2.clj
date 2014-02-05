@@ -24,7 +24,7 @@
    :doc
    "Generic comparison interface\nThis library defines generic versions of = not= < > <= >= zero?\nas multimethods that can be defined for any type. Of the\ngreater/less-than relations, types must minimally implement >."}
   {:source-url
-   "https://github.com/clojure/algo.generic/blob/1381315259c3c5ca8b8deec9e094bcf70742fbb9/src/main/clojure/clojure/algo/generic/functor.clj",
+   "https://github.com/clojure/algo.generic/blob/4dd3e17e494b7b6f43cda045d3162b0f60df7599/src/main/clojure/clojure/algo/generic/functor.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic/clojure.algo.generic.functor-api.html",
    :name "clojure.algo.generic.functor",
@@ -445,9 +445,9 @@
    :name "fmap",
    :namespace "clojure.algo.generic.functor",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/1381315259c3c5ca8b8deec9e094bcf70742fbb9/src/main/clojure/clojure/algo/generic/functor.clj#L19",
+   "https://github.com/clojure/algo.generic/blob/4dd3e17e494b7b6f43cda045d3162b0f60df7599/src/main/clojure/clojure/algo/generic/functor.clj#L19",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/1381315259c3c5ca8b8deec9e094bcf70742fbb9/src/main/clojure/clojure/algo/generic/functor.clj",
+   "https://github.com/clojure/algo.generic/raw/4dd3e17e494b7b6f43cda045d3162b0f60df7599/src/main/clojure/clojure/algo/generic/functor.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.functor-api.html#clojure.algo.generic.functor/fmap",
    :doc
