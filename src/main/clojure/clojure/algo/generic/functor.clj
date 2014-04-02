@@ -50,6 +50,10 @@
   [f s]
   (map f s))
 
+(defmethod fmap clojure.lang.ISeq
+  [f s]
+  (map f s))
+
 (defmethod fmap java.util.concurrent.Future
   [f o]
   (future (f @o)))
