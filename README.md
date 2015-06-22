@@ -1,5 +1,7 @@
 # algo.generic
 
+[![Join the chat at https://gitter.im/clojure/algo.generic](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/clojure/algo.generic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Generic versions of commonly used functions, implemented as multimethods
 that can be implemented for any data type.
 
