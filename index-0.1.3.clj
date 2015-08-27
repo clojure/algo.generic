@@ -31,7 +31,7 @@
    :author "Konrad Hinsen",
    :doc "Generic functor interface (fmap)"}
   {:source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic/clojure.algo.generic.math-functions-api.html",
    :name "clojure.algo.generic.math-functions",
@@ -455,277 +455,279 @@
    :var-type "multimethod",
    :line 19,
    :file "src/main/clojure/clojure/algo/generic/functor.clj"}
-  {:arglists ([x]),
+  {:arglists ([x] [x math-context]),
    :name "abs",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L60",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L89",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/abs",
-   :doc "Return the abs of x.",
+   :doc
+   "Return the absolute value of x. If x is a BigDecimal, abs takes an optional\nmath-context argument.",
    :var-type "multimethod",
-   :line 60,
+   :line 89,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "acos",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L61",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L64",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/acos",
    :doc "Return the acos of x.",
    :var-type "multimethod",
-   :line 61,
+   :line 64,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x y eps]),
    :name "approx=",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L117",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L208",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/approx=",
    :doc
    "Return true if the absolute value of the difference between x and y\nis less than eps.",
    :var-type "function",
-   :line 117,
+   :line 208,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "asin",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L62",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L65",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/asin",
    :doc "Return the asin of x.",
    :var-type "multimethod",
-   :line 62,
+   :line 65,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "atan",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L63",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L66",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/atan",
    :doc "Return the atan of x.",
    :var-type "multimethod",
-   :line 63,
+   :line 66,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x y]),
    :name "atan2",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L64",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L67",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/atan2",
    :doc "Return the atan2 of x and y.",
    :var-type "multimethod",
-   :line 64,
+   :line 67,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "ceil",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L65",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L68",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/ceil",
    :doc "Return the ceil of x.",
    :var-type "multimethod",
-   :line 65,
+   :line 68,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "conjugate",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L94",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L185",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/conjugate",
    :doc "Return the conjugate of x.",
    :var-type "multimethod",
-   :line 94,
+   :line 185,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "cos",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L66",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L69",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/cos",
    :doc "Return the cos of x.",
    :var-type "multimethod",
-   :line 66,
+   :line 69,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([name & decls]),
    :name "defmacro-",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L25",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L29",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/defmacro-",
    :doc "Same as defmacro but yields a private definition",
    :var-type "macro",
-   :line 25,
+   :line 29,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "exp",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L67",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L70",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/exp",
    :doc "Return the exp of x.",
    :var-type "multimethod",
-   :line 67,
+   :line 70,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "floor",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L68",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L71",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/floor",
    :doc "Return the floor of x.",
    :var-type "multimethod",
-   :line 68,
+   :line 71,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "log",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L69",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L72",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/log",
    :doc "Return the log of x.",
    :var-type "multimethod",
-   :line 69,
+   :line 72,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x y]),
    :name "pow",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L70",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L73",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/pow",
    :doc "Return the pow of x and y.",
    :var-type "multimethod",
-   :line 70,
+   :line 73,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "rint",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L71",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L74",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/rint",
    :doc "Return the rint of x.",
    :var-type "multimethod",
-   :line 71,
+   :line 74,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
-  {:arglists ([x]),
+  {:arglists ([x] [x math-context]),
    :name "round",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L72",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L135",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/round",
-   :doc "Return the round of x.",
+   :doc
+   "Round x.\nIf x is a BigDecimal, a math-context argument is also required:\n  (round x math-context)\nIf x is a Ratio,\n  (round x) converts x to a double and rounds;\n  (round x math-context) converts x to a BigDecimal and rounds.",
    :var-type "multimethod",
-   :line 72,
+   :line 135,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "sgn",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L80",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L171",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sgn",
    :doc "Return the sign of x (-1, 0, or 1).",
    :var-type "multimethod",
-   :line 80,
+   :line 171,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "sin",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L73",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L75",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sin",
    :doc "Return the sin of x.",
    :var-type "multimethod",
-   :line 73,
+   :line 75,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "sqr",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L105",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L196",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sqr",
    :doc "Return the square of x.",
    :var-type "multimethod",
-   :line 105,
+   :line 196,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "sqrt",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L74",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L76",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sqrt",
    :doc "Return the sqrt of x.",
    :var-type "multimethod",
-   :line 74,
+   :line 76,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"}
   {:arglists ([x]),
    :name "tan",
    :namespace "clojure.algo.generic.math-functions",
    :source-url
-   "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj#L75",
+   "https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L77",
    :raw-source-url
-   "https://github.com/clojure/algo.generic/raw/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/math_functions.clj",
+   "https://github.com/clojure/algo.generic/raw/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj",
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/tan",
    :doc "Return the tan of x.",
    :var-type "multimethod",
-   :line 75,
+   :line 77,
    :file "src/main/clojure/clojure/algo/generic/math_functions.clj"})}
