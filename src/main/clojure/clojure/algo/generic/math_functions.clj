@@ -10,9 +10,13 @@
 ;; agreeing to be bound by the terms of this license.  You must not
 ;; remove this notice, or any other, from this software.
 
+;; Cort Spellman, 2015:
+;; Changes of abs and round to be manually defined for various types instead
+;; of via defmathfn-1.
+
 (ns
-  ^{:author "Konrad Hinsen"
-     :doc "Generic math function interface
+    ^{:author "Konrad Hinsen"
+      :doc "Generic math function interface
            This library defines generic versions of common mathematical
            functions such as sqrt or sin as multimethods that can be
            defined for any type."}
@@ -57,7 +61,6 @@
 
 ; List of math functions taken from
 ; http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Math.html
-(defmathfn-1 abs)
 (defmathfn-1 acos)
 (defmathfn-1 asin)
 (defmathfn-1 atan)
@@ -69,10 +72,98 @@
 (defmathfn-1 log)
 (defmathfn-2 pow)
 (defmathfn-1 rint)
-(defmathfn-1 round)
 (defmathfn-1 sin)
 (defmathfn-1 sqrt)
 (defmathfn-1 tan)
+
+;
+; Absolute value
+; defmathfn-1 only works for types of numbers for which java.Math has an abs
+; method:
+; * java.math.BigInteger and java.math.BigDecimal classes define their own abs
+; methods.
+; * clojure.lang.BigInt may internally be a long or a BigInteger but in either
+; case clojure.lang.BigInt does not have an abs method.
+; * clojure.lang.Ratio does not have an abs method.
+;
+(defmulti abs
+  "Return the absolute value of x. If x is a BigDecimal, abs takes an optional
+  math-context argument."
+  {:arglists '([x] [x math-context])}
+  (fn [x & more] (type x)))
+
+(defmethod abs :default
+  [x]
+  (cond (gc/neg? x) (- x)
+        :else x))
+
+(defmethod abs java.lang.Number
+  [x]
+  (java.lang.Math/abs x))
+
+(defmethod abs java.math.BigDecimal
+  ([x]
+   (.abs x))
+  ([x math-context]
+   (.abs x math-context)))
+
+(defmethod abs java.math.BigInteger
+  [x]
+  (.abs x))
+
+(defmethod abs clojure.lang.BigInt
+  [x]
+  (if (nil? (.bipart x))
+    (clojure.lang.BigInt/fromLong (abs (.lpart x)))
+    (clojure.lang.BigInt/fromBigInteger (abs (.bipart x)))))
+
+(defmethod abs clojure.lang.Ratio
+  [x]
+  (/ (abs (numerator x))
+     (abs (denominator x))))
+
+;
+; Round
+; defmathfn-1 only works for types of numbers for which java.Math has an abs
+; method:
+; * java.math.BigInteger and java.math.BigDecimal classes define their own round
+; methods.
+; * clojure.lang.BigInt may internally be a long or a BigInteger but in either
+; case clojure.lang.BigInt does not have an round method.
+; * clojure.lang.Ratio does not have an round method.
+;
+(defmulti round
+  "Round x.
+  If x is a BigDecimal, a math-context argument is also required:
+    (round x math-context)
+  If x is a Ratio,
+    (round x) converts x to a double and rounds;
+    (round x math-context) converts x to a BigDecimal and rounds."
+  {:arglists '([x] [x math-context])}
+  (fn [x & more] (type x)))
+
+(doseq [c [java.lang.Float
+           java.lang.Double]]
+  (defmethod round c [x] (java.lang.Math/round x)))
+
+(doseq [c [java.lang.Byte
+           java.lang.Short
+           java.lang.Integer
+           java.lang.Long
+           java.math.BigInteger
+           clojure.lang.BigInt]]
+  (defmethod round c [x] x))
+
+(defmethod round java.math.BigDecimal
+  [x math-context]
+  (.round x math-context))
+
+(defmethod round clojure.lang.Ratio
+  ([x]
+   (round (double x)))
+  ([x math-context]
+   (round (bigdec x) math-context)))
+
 
 ;
 ; Sign
