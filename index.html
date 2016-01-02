@@ -1,12 +1,12 @@
 <html>
   <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Overview - Generic versions of common functions 0.1.3 API documentation</title>
-    <link href="static/favicon.png" rel="icon" />
-    <link href="static/favicon.png" rel="shortcut icon" />
-    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
-    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
-    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <link rel="icon" href="static/favicon.png" />
+    <link rel="shortcut icon" href="static/favicon.png" />
+    <link rel="stylesheet" href="static/clojure.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="static/wiki.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="static/internal.css" type="text/css" media="all" />
     <style>.menuWrapper{height: 36px;}</style>
   </head>
 <!--
@@ -19,48 +19,48 @@ namespace.
   <body>
     <div id="AllContentContainer">
       <div id="Header">
-	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="page header title" id="page-header" href="index.html">algo.generic API Reference</a></h1>
+	<a href="index.html" id="Logo"><img src="static/clojure-icon.gif" width="100" height="100" alt="Clojure" /></a>
+	<h1><a href="index.html" id="page-header" title="page header title">algo.generic API Reference</a></h1>
       </div>
       <div id="leftcolumn"><div style="text-align: center;"></div>
 <div class="menu">
   <div class="WikiCustomNav WikiElement wiki">
     <span class="toc-header"><span id="project-name">Generic versions of common functions</span> <span id="version">0.1.3</span> API</span><br />
     <ul>
-      <li><a class="wiki_link" href="index.html">Overview</a></li>
-      <li><a class="wiki_link" href="api-index.html">API Index</a></li>
+      <li><a href="index.html" class="wiki_link">Overview</a></li>
+      <li><a href="api-index.html" class="wiki_link">API Index</a></li>
     </ul>
     <div class="NamespaceTOC">
       <span class="toc-header">Namespaces</span>
       <ul id="left-sidebar-list">
-        <li><a href="clojure.algo.generic.arithmetic-api.html" class="wiki_link">clojure.algo.generic.arithmetic</a></li><li><a href="clojure.algo.generic.collection-api.html" class="wiki_link">clojure.algo.generic.collection</a></li><li><a href="clojure.algo.generic.comparison-api.html" class="wiki_link">clojure.algo.generic.comparison</a></li><li><a href="clojure.algo.generic.functor-api.html" class="wiki_link">clojure.algo.generic.functor</a></li><li><a href="clojure.algo.generic.math-functions-api.html" class="wiki_link">clojure.algo.generic.math-functions</a></li>
+        <li><a class="wiki_link" href="clojure.algo.generic.arithmetic-api.html">clojure.algo.generic.arithmetic</a></li><li><a class="wiki_link" href="clojure.algo.generic.collection-api.html">clojure.algo.generic.collection</a></li><li><a class="wiki_link" href="clojure.algo.generic.comparison-api.html">clojure.algo.generic.comparison</a></li><li><a class="wiki_link" href="clojure.algo.generic.functor-api.html">clojure.algo.generic.functor</a></li><li><a class="wiki_link" href="clojure.algo.generic.math-functions-api.html">clojure.algo.generic.math-functions</a></li>
       </ul>
     </div>
     
-    <a href="http://clojure.org" class="wiki_link">Clojure Home</a>
+    <a class="wiki_link" href="http://clojure.org">Clojure Home</a>
   </div>
 </div>
 </div>
       <div id="rightcolumn">
 	<div id="Content">
 	  <div class="contentBox"><div class="innerContentBox">
-              <div id="content_view" class="wiki wikiPage">
+              <div class="wiki wikiPage" id="content_view">
                 <div id="right-sidebar"><div id="toc">
   <h1 class="nopad">Table of Contents</h1>
-  <div style="margin-left: 1em;" class="toc-section">
-    <a href="#clojure.algo.generic.arithmetic" style="margin-top: 3px;">clojure.algo.generic.arithmetic</a>
+  <div class="toc-section" style="margin-left: 1em;">
+    <a style="margin-top: 3px;" href="#clojure.algo.generic.arithmetic">clojure.algo.generic.arithmetic</a>
     
-  </div><div style="margin-left: 1em;" class="toc-section">
-    <a href="#clojure.algo.generic.collection" style="margin-top: 3px;">clojure.algo.generic.collection</a>
+  </div><div class="toc-section" style="margin-left: 1em;">
+    <a style="margin-top: 3px;" href="#clojure.algo.generic.collection">clojure.algo.generic.collection</a>
     
-  </div><div style="margin-left: 1em;" class="toc-section">
-    <a href="#clojure.algo.generic.comparison" style="margin-top: 3px;">clojure.algo.generic.comparison</a>
+  </div><div class="toc-section" style="margin-left: 1em;">
+    <a style="margin-top: 3px;" href="#clojure.algo.generic.comparison">clojure.algo.generic.comparison</a>
     
-  </div><div style="margin-left: 1em;" class="toc-section">
-    <a href="#clojure.algo.generic.functor" style="margin-top: 3px;">clojure.algo.generic.functor</a>
+  </div><div class="toc-section" style="margin-left: 1em;">
+    <a style="margin-top: 3px;" href="#clojure.algo.generic.functor">clojure.algo.generic.functor</a>
     
-  </div><div style="margin-left: 1em;" class="toc-section">
-    <a href="#clojure.algo.generic.math-functions" style="margin-top: 3px;">clojure.algo.generic.math-functions</a>
+  </div><div class="toc-section" style="margin-left: 1em;">
+    <a style="margin-top: 3px;" href="#clojure.algo.generic.math-functions">clojure.algo.generic.math-functions</a>
     
   </div>
 </div>
@@ -75,7 +75,7 @@ namespace.
   <hr />
   <h2 id="clojure.algo.generic.arithmetic">clojure.algo.generic.arithmetic</h2>
   <span id="author-line">by <span id="author-name">Konrad Hinsen</span><br /></span>
-  <a href="clojure.algo.generic.arithmetic-api.html" id="api-link">Detailed API documentation</a><br />
+  <a id="api-link" href="clojure.algo.generic.arithmetic-api.html">Detailed API documentation</a><br />
   <pre id="namespace-docstr">Generic arithmetic interface
 This library defines generic versions of + - * / as multimethods
 that can be defined for any type. The minimal required 
@@ -87,14 +87,14 @@ efficiency reasons.</pre>
   
   
   Contents:
-  <span id="var-link"><a href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/*" id="var-tag">*</a> </span><span id="var-link"><a href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/+" id="var-tag">+</a> </span><span id="var-link"><a href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/-" id="var-tag">-</a> </span><span id="var-link"><a href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/-&gt;one-type" id="var-tag">-&gt;one-type</a> </span><span id="var-link"><a href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/-&gt;zero-type" id="var-tag">-&gt;zero-type</a> </span><span id="var-link"><a href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic//" id="var-tag">/</a> </span><span id="var-link"><a href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/defmethod*" id="var-tag">defmethod*</a> </span><span id="var-link"><a href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/map-&gt;one-type" id="var-tag">map-&gt;one-type</a> </span><span id="var-link"><a href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/map-&gt;zero-type" id="var-tag">map-&gt;zero-type</a> </span><span id="var-link"><a href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/one-type" id="var-tag">one-type</a> </span><span id="var-link"><a href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/qsym" id="var-tag">qsym</a> </span><span id="var-link"><a href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/zero-type" id="var-tag">zero-type</a> </span><br />
+  <span id="var-link"><a id="var-tag" href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/*">*</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/+">+</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/-">-</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/-&gt;one-type">-&gt;one-type</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/-&gt;zero-type">-&gt;zero-type</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic//">/</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/defmethod*">defmethod*</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/map-&gt;one-type">map-&gt;one-type</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/map-&gt;zero-type">map-&gt;zero-type</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/one-type">one-type</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/qsym">qsym</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/zero-type">zero-type</a> </span><br />
   
 </div><div id="namespace-entry">
   <br />
   <hr />
   <h2 id="clojure.algo.generic.collection">clojure.algo.generic.collection</h2>
   <span id="author-line">by <span id="author-name">Konrad Hinsen</span><br /></span>
-  <a href="clojure.algo.generic.collection-api.html" id="api-link">Detailed API documentation</a><br />
+  <a id="api-link" href="clojure.algo.generic.collection-api.html">Detailed API documentation</a><br />
   <pre id="namespace-docstr">Generic collection interface
 This library defines generic versions of common
 collection-related functions as multimethods that can be
@@ -103,14 +103,14 @@ defined for any type.</pre>
   
   
   Contents:
-  <span id="var-link"><a href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/assoc" id="var-tag">assoc</a> </span><span id="var-link"><a href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/conj" id="var-tag">conj</a> </span><span id="var-link"><a href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/dissoc" id="var-tag">dissoc</a> </span><span id="var-link"><a href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/empty" id="var-tag">empty</a> </span><span id="var-link"><a href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/get" id="var-tag">get</a> </span><span id="var-link"><a href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/into" id="var-tag">into</a> </span><span id="var-link"><a href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/seq" id="var-tag">seq</a> </span><br />
+  <span id="var-link"><a id="var-tag" href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/assoc">assoc</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/conj">conj</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/dissoc">dissoc</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/empty">empty</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/get">get</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/into">into</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.collection-api.html#clojure.algo.generic.collection/seq">seq</a> </span><br />
   
 </div><div id="namespace-entry">
   <br />
   <hr />
   <h2 id="clojure.algo.generic.comparison">clojure.algo.generic.comparison</h2>
   <span id="author-line">by <span id="author-name">Konrad Hinsen</span><br /></span>
-  <a href="clojure.algo.generic.comparison-api.html" id="api-link">Detailed API documentation</a><br />
+  <a id="api-link" href="clojure.algo.generic.comparison-api.html">Detailed API documentation</a><br />
   <pre id="namespace-docstr">Generic comparison interface
 This library defines generic versions of = not= &lt; &gt; &lt;= &gt;= zero?
 as multimethods that can be defined for any type. Of the
@@ -119,27 +119,27 @@ greater/less-than relations, types must minimally implement &gt;.</pre>
   
   
   Contents:
-  <span id="var-link"><a href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/&lt;" id="var-tag">&lt;</a> </span><span id="var-link"><a href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/&lt;=" id="var-tag">&lt;=</a> </span><span id="var-link"><a href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/=" id="var-tag">=</a> </span><span id="var-link"><a href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/&gt;" id="var-tag">&gt;</a> </span><span id="var-link"><a href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/&gt;=" id="var-tag">&gt;=</a> </span><span id="var-link"><a href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/max" id="var-tag">max</a> </span><span id="var-link"><a href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/min" id="var-tag">min</a> </span><span id="var-link"><a href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/neg?" id="var-tag">neg?</a> </span><span id="var-link"><a href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/not=" id="var-tag">not=</a> </span><span id="var-link"><a href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/pos?" id="var-tag">pos?</a> </span><span id="var-link"><a href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/zero?" id="var-tag">zero?</a> </span><br />
+  <span id="var-link"><a id="var-tag" href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/&lt;">&lt;</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/&lt;=">&lt;=</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/=">=</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/&gt;">&gt;</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/&gt;=">&gt;=</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/max">max</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/min">min</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/neg?">neg?</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/not=">not=</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/pos?">pos?</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.comparison-api.html#clojure.algo.generic.comparison/zero?">zero?</a> </span><br />
   
 </div><div id="namespace-entry">
   <br />
   <hr />
   <h2 id="clojure.algo.generic.functor">clojure.algo.generic.functor</h2>
   <span id="author-line">by <span id="author-name">Konrad Hinsen</span><br /></span>
-  <a href="clojure.algo.generic.functor-api.html" id="api-link">Detailed API documentation</a><br />
+  <a id="api-link" href="clojure.algo.generic.functor-api.html">Detailed API documentation</a><br />
   <pre id="namespace-docstr">Generic functor interface (fmap)</pre>
   
   
   
   Contents:
-  <span id="var-link"><a href="clojure.algo.generic.functor-api.html#clojure.algo.generic.functor/fmap" id="var-tag">fmap</a> </span><br />
+  <span id="var-link"><a id="var-tag" href="clojure.algo.generic.functor-api.html#clojure.algo.generic.functor/fmap">fmap</a> </span><br />
   
 </div><div id="namespace-entry">
   <br />
   <hr />
   <h2 id="clojure.algo.generic.math-functions">clojure.algo.generic.math-functions</h2>
   <span id="author-line">by <span id="author-name">Konrad Hinsen</span><br /></span>
-  <a href="clojure.algo.generic.math-functions-api.html" id="api-link">Detailed API documentation</a><br />
+  <a id="api-link" href="clojure.algo.generic.math-functions-api.html">Detailed API documentation</a><br />
   <pre id="namespace-docstr">Generic math function interface
 This library defines generic versions of common mathematical
 functions such as sqrt or sin as multimethods that can be
@@ -148,7 +148,7 @@ defined for any type.</pre>
   
   
   Contents:
-  <span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/abs" id="var-tag">abs</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/acos" id="var-tag">acos</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/approx=" id="var-tag">approx=</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/asin" id="var-tag">asin</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/atan" id="var-tag">atan</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/atan2" id="var-tag">atan2</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/ceil" id="var-tag">ceil</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/conjugate" id="var-tag">conjugate</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/cos" id="var-tag">cos</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/defmacro-" id="var-tag">defmacro-</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/exp" id="var-tag">exp</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/floor" id="var-tag">floor</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/log" id="var-tag">log</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/pow" id="var-tag">pow</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/rint" id="var-tag">rint</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/round" id="var-tag">round</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sgn" id="var-tag">sgn</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sin" id="var-tag">sin</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sqr" id="var-tag">sqr</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sqrt" id="var-tag">sqrt</a> </span><span id="var-link"><a href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/tan" id="var-tag">tan</a> </span><br />
+  <span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/abs">abs</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/acos">acos</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/approx=">approx=</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/asin">asin</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/atan">atan</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/atan2">atan2</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/ceil">ceil</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/conjugate">conjugate</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/cos">cos</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/defmacro-">defmacro-</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/exp">exp</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/floor">floor</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/log">log</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/pow">pow</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/rint">rint</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/round">round</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sgn">sgn</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sin">sin</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sqr">sqr</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/sqrt">sqrt</a> </span><span id="var-link"><a id="var-tag" href="clojure.algo.generic.math-functions-api.html#clojure.algo.generic.math-functions/tan">tan</a> </span><br />
   
 </div>
 </div>
@@ -157,10 +157,10 @@ defined for any type.</pre>
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;" id="copyright">Copyright 2007-2014 by Rich Hickey and the various contributors</div>
+	  <div id="copyright" style="text-align: center;">Copyright 2007-2015 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
-      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
+      <div id="DesignedBy">Logo &amp; site design by <a href="http://www.tomhickey.com" title="Visit Tom Hickey's website.">Tom Hickey</a>.<br />
       Clojure auto-documentation system by Tom Faulhaber.</div>
     </div>
     <!-- /AllContentContainer -->

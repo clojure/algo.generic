@@ -1,12 +1,12 @@
 <html>
   <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>clojure.algo.generic.math-functions - Generic versions of common functions 0.1.3 API documentation</title>
-    <link href="static/favicon.png" rel="icon" />
-    <link href="static/favicon.png" rel="shortcut icon" />
-    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
-    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
-    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <link rel="icon" href="static/favicon.png" />
+    <link rel="shortcut icon" href="static/favicon.png" />
+    <link rel="stylesheet" href="static/clojure.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="static/wiki.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="static/internal.css" type="text/css" media="all" />
     <style>.menuWrapper{height: 36px;}</style>
   </head>
 <!--
@@ -19,107 +19,107 @@ namespace.
   <body>
     <div id="AllContentContainer">
       <div id="Header">
-	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
-	<h1><a title="page header title" id="page-header" href="index.html">algo.generic API Reference</a></h1>
+	<a href="index.html" id="Logo"><img src="static/clojure-icon.gif" width="100" height="100" alt="Clojure" /></a>
+	<h1><a href="index.html" id="page-header" title="page header title">algo.generic API Reference</a></h1>
       </div>
       <div id="leftcolumn"><div style="text-align: center;"></div>
 <div class="menu">
   <div class="WikiCustomNav WikiElement wiki">
     <span class="toc-header"><span id="project-name">Generic versions of common functions</span> <span id="version">0.1.3</span> API</span><br />
     <ul>
-      <li><a class="wiki_link" href="index.html">Overview</a></li>
-      <li><a class="wiki_link" href="api-index.html">API Index</a></li>
+      <li><a href="index.html" class="wiki_link">Overview</a></li>
+      <li><a href="api-index.html" class="wiki_link">API Index</a></li>
     </ul>
     <div class="NamespaceTOC">
       <span class="toc-header">Namespaces</span>
       <ul id="left-sidebar-list">
-        <li><a href="clojure.algo.generic.arithmetic-api.html" class="wiki_link">clojure.algo.generic.arithmetic</a></li><li><a href="clojure.algo.generic.collection-api.html" class="wiki_link">clojure.algo.generic.collection</a></li><li><a href="clojure.algo.generic.comparison-api.html" class="wiki_link">clojure.algo.generic.comparison</a></li><li><a href="clojure.algo.generic.functor-api.html" class="wiki_link">clojure.algo.generic.functor</a></li><li><a href="clojure.algo.generic.math-functions-api.html" class="wiki_link">clojure.algo.generic.math-functions</a></li>
+        <li><a class="wiki_link" href="clojure.algo.generic.arithmetic-api.html">clojure.algo.generic.arithmetic</a></li><li><a class="wiki_link" href="clojure.algo.generic.collection-api.html">clojure.algo.generic.collection</a></li><li><a class="wiki_link" href="clojure.algo.generic.comparison-api.html">clojure.algo.generic.comparison</a></li><li><a class="wiki_link" href="clojure.algo.generic.functor-api.html">clojure.algo.generic.functor</a></li><li><a class="wiki_link" href="clojure.algo.generic.math-functions-api.html">clojure.algo.generic.math-functions</a></li>
       </ul>
     </div>
     
-    <a href="http://clojure.org" class="wiki_link">Clojure Home</a>
+    <a class="wiki_link" href="http://clojure.org">Clojure Home</a>
   </div>
 </div>
 </div>
       <div id="rightcolumn">
 	<div id="Content">
 	  <div class="contentBox"><div class="innerContentBox">
-              <div id="content_view" class="wiki wikiPage">
+              <div class="wiki wikiPage" id="content_view">
                 <div id="right-sidebar"><div id="toc">
   <h1 class="nopad">Table of Contents</h1>
-  <div style="margin-left: 1em;" class="toc-section">
-    <a href="#toc0" style="margin-top: 3px;">Overview</a>
+  <div class="toc-section" style="margin-left: 1em;">
+    <a style="margin-top: 3px;" href="#toc0">Overview</a>
     
-  </div><div style="margin-left: 1em;" class="toc-section">
-    <a href="#" style="margin-top: 3px;"></a>
+  </div><div class="toc-section" style="margin-left: 1em;">
+    <a style="margin-top: 3px;" href="#"></a>
     
-  </div><div style="margin-left: 1em;" class="toc-section">
-    <a href="#" style="margin-top: 3px;"></a>
+  </div><div class="toc-section" style="margin-left: 1em;">
+    <a style="margin-top: 3px;" href="#"></a>
     
-  </div><div style="margin-left: 1em;" class="toc-section">
-    <a href="#var-section" style="margin-top: 3px;">Vars and Functions</a>
-    <div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/abs">abs</a>
+  </div><div class="toc-section" style="margin-left: 1em;">
+    <a style="margin-top: 3px;" href="#var-section">Vars and Functions</a>
+    <div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/abs" class="toc-entry-anchor">abs</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/acos">acos</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/acos" class="toc-entry-anchor">acos</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/approx=">approx=</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/approx=" class="toc-entry-anchor">approx=</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/asin">asin</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/asin" class="toc-entry-anchor">asin</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/atan">atan</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/atan" class="toc-entry-anchor">atan</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/atan2">atan2</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/atan2" class="toc-entry-anchor">atan2</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/ceil">ceil</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/ceil" class="toc-entry-anchor">ceil</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/conjugate">conjugate</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/conjugate" class="toc-entry-anchor">conjugate</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/cos">cos</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/cos" class="toc-entry-anchor">cos</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/defmacro-">defmacro-</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/defmacro-" class="toc-entry-anchor">defmacro-</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/exp">exp</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/exp" class="toc-entry-anchor">exp</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/floor">floor</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/floor" class="toc-entry-anchor">floor</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/log">log</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/log" class="toc-entry-anchor">log</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/pow">pow</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/pow" class="toc-entry-anchor">pow</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/rint">rint</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/rint" class="toc-entry-anchor">rint</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/round">round</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/round" class="toc-entry-anchor">round</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/sgn">sgn</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/sgn" class="toc-entry-anchor">sgn</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/sin">sin</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/sin" class="toc-entry-anchor">sin</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/sqr">sqr</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/sqr" class="toc-entry-anchor">sqr</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/sqrt">sqrt</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/sqrt" class="toc-entry-anchor">sqrt</a>
       
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a class="toc-entry-anchor" href="#clojure.algo.generic.math-functions/tan">tan</a>
+    </div><div class="toc-entry" style="margin-left: 1em;">
+      <a href="#clojure.algo.generic.math-functions/tan" class="toc-entry-anchor">tan</a>
       
     </div>
   </div>
@@ -158,7 +158,7 @@ defined for any type.</pre>
 math-context argument.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L89" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L89">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -169,7 +169,7 @@ math-context argument.</pre>
     <pre id="var-docstr">Return the acos of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L64" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L64">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -181,7 +181,7 @@ math-context argument.</pre>
 is less than eps.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L208" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L208">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -192,7 +192,7 @@ is less than eps.</pre>
     <pre id="var-docstr">Return the asin of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L65" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L65">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -203,7 +203,7 @@ is less than eps.</pre>
     <pre id="var-docstr">Return the atan of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L66" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L66">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -214,7 +214,7 @@ is less than eps.</pre>
     <pre id="var-docstr">Return the atan2 of x and y.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L67" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L67">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -225,7 +225,7 @@ is less than eps.</pre>
     <pre id="var-docstr">Return the ceil of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L68" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L68">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -236,7 +236,7 @@ is less than eps.</pre>
     <pre id="var-docstr">Return the conjugate of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L185" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L185">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -247,7 +247,7 @@ is less than eps.</pre>
     <pre id="var-docstr">Return the cos of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L69" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L69">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -258,7 +258,7 @@ is less than eps.</pre>
     <pre id="var-docstr">Same as defmacro but yields a private definition</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L29" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L29">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -269,7 +269,7 @@ is less than eps.</pre>
     <pre id="var-docstr">Return the exp of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L70" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L70">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -280,7 +280,7 @@ is less than eps.</pre>
     <pre id="var-docstr">Return the floor of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L71" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L71">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -291,7 +291,7 @@ is less than eps.</pre>
     <pre id="var-docstr">Return the log of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L72" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L72">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -302,7 +302,7 @@ is less than eps.</pre>
     <pre id="var-docstr">Return the pow of x and y.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L73" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L73">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -313,7 +313,7 @@ is less than eps.</pre>
     <pre id="var-docstr">Return the rint of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L74" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L74">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -330,7 +330,7 @@ If x is a Ratio,
   (round x math-context) converts x to a BigDecimal and rounds.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L135" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L135">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -341,7 +341,7 @@ If x is a Ratio,
     <pre id="var-docstr">Return the sign of x (-1, 0, or 1).</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L171" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L171">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -352,7 +352,7 @@ If x is a Ratio,
     <pre id="var-docstr">Return the sin of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L75" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L75">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -363,7 +363,7 @@ If x is a Ratio,
     <pre id="var-docstr">Return the square of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L196" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L196">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -374,7 +374,7 @@ If x is a Ratio,
     <pre id="var-docstr">Return the sqrt of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L76" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L76">Source</a>
   </div><div id="var-entry">
     <br />
     <hr />
@@ -385,7 +385,7 @@ If x is a Ratio,
     <pre id="var-docstr">Return the tan of x.</pre>
     
     
-    <a href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L77" id="var-source">Source</a>
+    <a id="var-source" href="https://github.com/clojure/algo.generic/blob/d90c2ba1fdb01306bd0fc1d6434527a6d549f73f/src/main/clojure/clojure/algo/generic/math_functions.clj#L77">Source</a>
   </div>
 </div>
 
@@ -396,10 +396,10 @@ If x is a Ratio,
           </div>
 	</div>
 	<div id="foot">
-	  <div style="text-align: center;" id="copyright">Copyright 2007-2014 by Rich Hickey and the various contributors</div>
+	  <div id="copyright" style="text-align: center;">Copyright 2007-2015 by Rich Hickey and the various contributors</div>
 	</div>
       </div>
-      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
+      <div id="DesignedBy">Logo &amp; site design by <a href="http://www.tomhickey.com" title="Visit Tom Hickey's website.">Tom Hickey</a>.<br />
       Clojure auto-documentation system by Tom Faulhaber.</div>
     </div>
     <!-- /AllContentContainer -->
