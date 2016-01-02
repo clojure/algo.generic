@@ -145,7 +145,7 @@
    "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L34",
    :line 34,
    :var-type "function",
-   :arglists ([m__5818__auto__]),
+   :arglists ([m#]),
    :doc
    "Factory function for class clojure.algo.generic.arithmetic.one-type, taking a map of keywords to field values.",
    :namespace "clojure.algo.generic.arithmetic",
@@ -159,7 +159,7 @@
    "https://github.com/clojure/algo.generic/blob/b363d06b4a812bf4527232bff9917d0298f6f837/src/main/clojure/clojure/algo/generic/arithmetic.clj#L30",
    :line 30,
    :var-type "function",
-   :arglists ([m__5818__auto__]),
+   :arglists ([m#]),
    :doc
    "Factory function for class clojure.algo.generic.arithmetic.zero-type, taking a map of keywords to field values.",
    :namespace "clojure.algo.generic.arithmetic",
@@ -182,6 +182,7 @@
   {:name "one-type",
    :var-type "record",
    :namespace "clojure.algo.generic.arithmetic",
+   :arglists nil,
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/one-type",
    :source-url nil,
@@ -190,6 +191,7 @@
   {:name "zero-type",
    :var-type "record",
    :namespace "clojure.algo.generic.arithmetic",
+   :arglists nil,
    :wiki-url
    "http://clojure.github.com/algo.generic//clojure.algo.generic.arithmetic-api.html#clojure.algo.generic.arithmetic/zero-type",
    :source-url nil,
