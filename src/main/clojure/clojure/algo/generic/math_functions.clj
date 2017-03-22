@@ -76,6 +76,16 @@
 (defmathfn-1 sqrt)
 (defmathfn-1 tan)
 
+;; http://docs.oracle.com/javase/6/docs/api/java/lang/Math.html
+(defmathfn-1 cbrt)
+(defmathfn-1 cosh)
+(defmathfn-1 expm1)
+(defmathfn-2 hypot)
+(defmathfn-1 log10)
+(defmathfn-1 log1p)
+(defmathfn-1 sinh)
+(defmathfn-1 tanh)
+
 ;
 ; Absolute value
 ; defmathfn-1 only works for types of numbers for which java.Math has an abs
