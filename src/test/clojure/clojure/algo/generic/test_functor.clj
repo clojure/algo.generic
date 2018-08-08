@@ -21,6 +21,8 @@
        (gf/fmap inc {:A 1 :B 2 :C 3}) {:A 2 :B 3 :C 4}
        (gf/fmap inc #{1 2 3}) #{2 3 4}
        (gf/fmap inc (lazy-seq [1 2 3])) (list 2 3 4)
+       (gf/fmap inc (seq [1 2 3])) (list 2 3 4)
+       (gf/fmap inc (range 3)) (list 1 2 3)
        (gf/fmap inc nil) nil))
 
 ; Test implementation for functions

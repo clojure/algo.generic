@@ -45,8 +45,9 @@
 (prefer-method fmap clojure.lang.IPersistentVector clojure.lang.IFn)
 (prefer-method fmap clojure.lang.IPersistentMap clojure.lang.IFn)
 (prefer-method fmap clojure.lang.IPersistentSet clojure.lang.IFn)
+(prefer-method fmap clojure.lang.IPersistentList clojure.lang.ISeq)
 
-(defmethod fmap clojure.lang.LazySeq
+(defmethod fmap clojure.lang.ISeq
   [f s]
   (map f s))
 
