@@ -81,6 +81,11 @@ Latest stable release: 0.1.3
 
 * [Development Snapshot Versions](https://oss.sonatype.org/index.html#nexus-search;gav~org.clojure~algo.generic~~~)
 
+[CLI/`deps.edn`](https://clojure.org/reference/deps_and_cli) dependency information:
+```clojure
+org.clojure/algo.generic {:mvn/version "0.1.3"}
+```
+
 [Leiningen](http://github.com/technomancy/leiningen/) dependency information:
 
     [org.clojure/algo.generic "0.1.3"]
