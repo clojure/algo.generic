@@ -3,6 +3,7 @@
   <artifactId>algo.generic</artifactId>
   <version>1.0.2-SNAPSHOT</version>
   <name>algo.generic</name>
+  <description>Generic versions of commonly used functions, implemented as multimethods that can be implemented for any data type.</description>
 
   <parent>
     <groupId>org.clojure</groupId>
