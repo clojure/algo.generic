@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <artifactId>algo.generic</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>0.1.4</version>
   <name>algo.generic</name>
   <description>Generic versions of commonly used functions, implemented as multimethods that can be implemented for any data type.</description>
 
@@ -24,6 +24,6 @@
     <connection>scm:git:git@github.com:clojure/algo.generic.git</connection>
     <developerConnection>scm:git:git@github.com:clojure/algo.generic.git</developerConnection>
     <url>git@github.com:clojure/algo.generic.git</url>
-    <tag>HEAD</tag>
+    <tag>v0.1.4</tag>
   </scm>
 </project>
