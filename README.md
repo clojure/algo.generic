@@ -75,7 +75,7 @@ already derived from `root-type`.
 
 ## Releases and dependency information
 
-Latest stable release: 0.1.3
+Latest stable release: 0.1.4
 
 * [All released versions](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.clojure%22%20AND%20a%3A%22algo.generic%22)
 
@@ -83,19 +83,19 @@ Latest stable release: 0.1.3
 
 [CLI/`deps.edn`](https://clojure.org/reference/deps_and_cli) dependency information:
 ```clojure
-org.clojure/algo.generic {:mvn/version "0.1.3"}
+org.clojure/algo.generic {:mvn/version "0.1.4"}
 ```
 
 [Leiningen](https://github.com/technomancy/leiningen/) dependency information:
 
-    [org.clojure/algo.generic "0.1.3"]
+    [org.clojure/algo.generic "0.1.4"]
 
 [Maven](https://maven.apache.org/) dependency information:
 
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>algo.generic</artifactId>
-      <version>0.1.3</version>
+      <version>0.1.4</version>
     </dependency>
 
 ## License
